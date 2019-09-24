@@ -12,7 +12,9 @@
 // });
 
 let meals = [];
+let totalProtein = 0;
 
+document.getElementById("totalProtein").innerHTML = `${totalProtein}`;
 function addMeal(name, protein) {
   const meal = {
     name,
@@ -20,7 +22,8 @@ function addMeal(name, protein) {
     id: Date.now()
   };
   meals.push(meal);
-  console.log(meals);
+  totalProtein -= protein;
+  document.getElementById("totalProtein").innerHTML = `${totalProtein}`;
 }
 
 const form = document.getElementById("form");
@@ -41,3 +44,13 @@ form.addEventListener("submit", event => {
 function printMeals() {
   console.log(meals);
 }
+
+const totalPro = document.getElementById("totalPro");
+totalPro.addEventListener("submit", event => {
+  event.preventDefault();
+  const total = document.getElementById("total").value;
+  if (total !== 0) {
+    totalProtein = total;
+  }
+  document.getElementById("totalProtein").innerHTML = `${totalProtein}`;
+});
