@@ -14,10 +14,16 @@
         <h1>Protein Calculator</h1>
       </div>
     </header>
-    <form id="form" action="example/submit.html">
+    <form action="" method="get">
+      How much protein per Day?
+      <input type="number" name="totalPro" id="total" />
+      <input type="submit" value="Enter amount" />
+    </form>
+    <h3>Total Protein left</h3>
+    <form id="form" action="">
       Name: <input id="meal" type="text" name="name" /><br />
       Amount: <input id="protein" type="number" name="number" /><br />
-      <input type="submit" value="Click me" />
+      <input type="submit" value="Add meal" />
     </form>
     <script src="hackathon.js"></script>
   </body>

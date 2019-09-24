@@ -38,3 +38,6 @@ form.addEventListener("submit", event => {
     meal.focus();
   }
 });
+function printMeals() {
+  console.log(meals);
+}
